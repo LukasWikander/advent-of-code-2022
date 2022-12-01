@@ -16,6 +16,7 @@ int main(int argc, char** argv) {
     auto sumCarriedCalories = std::accumulate(elves.crbegin(), elves.crbegin() + 3, 0, [](int sum, Elf elf) {
         return sum + elf.getTotalCarriedCalories();
     });
+    std::cout << "The most loaded elf carries " << elves.back().getTotalCarriedCalories() << " calories." << std::endl;
     std::cout << "The three most loaded elves carry a total of " << sumCarriedCalories << " calories." << std::endl;
     return 0;
 }
