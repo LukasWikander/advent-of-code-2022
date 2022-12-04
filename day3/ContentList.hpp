@@ -1,17 +1,8 @@
 #pragma once
 
-#include <vector>
-#include <string>
-#include <filesystem>
-#include <fstream>
+#include "PuzzleInput.hpp"
 
-class ContentList : public std::vector<std::string> {
+class ContentList : public PuzzleInput {
 public:
-    ContentList(std::filesystem::path input) {
-        std::ifstream ifs(input);
-        std::string line;
-        while (std::getline(ifs, line)) {
-            push_back(line);
-        }
-    }
+    using PuzzleInput::PuzzleInput;
 };
