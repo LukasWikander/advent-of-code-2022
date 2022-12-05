@@ -14,4 +14,5 @@ public:
             push_back(line);
         }
     }
+    PuzzleInput() = default;
 };
