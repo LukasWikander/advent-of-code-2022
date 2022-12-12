@@ -4,7 +4,7 @@ project(AdventOfCode2022 LANGUAGES CXX)
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
 set(CMAKE_CXX_STANDARD 17)
-list(APPEND DAYS day1 day2 day3 day4 day5 day6 day7 day8 day9)
+list(APPEND DAYS day1 day2 day3 day4 day5 day6 day7 day8 day9 day10)
 
 foreach(DAY ${DAYS})
     file(GLOB SOURCES ${DAY}/*.cpp)
@@ -15,3 +15,4 @@ endforeach()
 
 target_link_libraries(day8 Eigen3::Eigen)
 target_link_libraries(day9 Eigen3::Eigen)
+target_link_libraries(day10 Eigen3::Eigen)
